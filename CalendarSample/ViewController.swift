@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FSCalendarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +25,8 @@ class ViewController: UIViewController {
     }
 
 
+    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print("Date : \(date.description)")
+    }
 }
 
